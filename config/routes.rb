@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  namespace :v1 do resources :stories, except: [:new, :edit] end
   namespace :v1 do resources :users, except: [:new, :edit] end
   devise_for :users, only: []
 
